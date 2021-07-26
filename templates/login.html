@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <link rel="stylesheet" href="../static/css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <nav>
+      <div id="show-quiz-container" class="nav-item">
+        <button type="button" onclick="openQuiz()">Open Quiz</button>
+      </div>
+      <div id="show-login-container" class="nav-item">
+        <button type="button" onclick="openForm()">Open Login Page</button>
+      </div>
+    </nav>
+    <div class="main-container">
+      <div class="quiz-container" id="quiz">
+        <div id="form-quiz">
+          <h2 class="form-head">Quiz</h2>
+          <div id="quiz-questions"></div>
+          <div id="login-button">
+            <button type="button" onclick="submitQuiz()">Submit</button>
+          </div>
+        </div>
+      </div>
+      <div class="login-container" id="login">
+        <form id="form-login">
+          <h2 class="form-head">Login</h2>
+          <label for="username">Username</label><br />
+          <input type="text" id="username" name="username" /><br />
+          <p style="text-align: start" id="alert-username"></p>
+          <label for="password">Password</label><br />
+          <input id="password" name="password" type="password" />
+          <p style="text-align: start" id="alert-password"></p>
+          <input type="checkbox" onclick="showPassword()" />Show Password
+          <p><a href="#">Forgot Password?</a></p>
+          <div id="login-button">
+            <button type="button" onclick="validate()">Login</button>
+          </div>
+          <p style="text-align: center">Or Sign Up Using</p>
+          <div style="text-align: center">
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="../static/js/index.js"></script>
+    <script src="../static/js/quiz.js"></script>
+  </body>
+</html>
